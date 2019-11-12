@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<!--Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.
+<script>
+    for (i = 1; i <= 10; i++) {
+        document.write(i+' ');
+        if (i === 9) {
+            document.write('done');
+            // i++;
+        }
+    }
+</script>-->
+
+<!--Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.-->
+<!--<script>
+    let tempC = prompt('Input temperature: ');
+    while (tempC<20||tempC>100) {
+        tempC = prompt('Please input temperature between 20 and 100');
+    }
+    document.write('Temperature you inputed is: '+ tempC);
+</script>-->
+<!--Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+<script>
+    function fibonacci(num) {
+        if (num <= 1) return 1;
+        return fibonacci(num - 1) + fibonacci(num - 2);
+    }
+    for (let num=0 ; num<=18;num++) {
+        document.write(fibonacci(num)+' ');
+        }
+
+</script>-->
+
+<!--Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+<script>
+    let i = 1; j = 0; num = 10;
+    while (num>=1){
+        i = i + j;
+        j = i - j;
+        num&#45;&#45;;
+        if (j%5===0){
+            document.write('Số fibonacci thứ '+num+' chia hết cho 5')
+        }
+    }
+</script>-->
+
+<!--Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+<script>
+
+    function sumFibs(num) {
+        if (num <= 2) {
+            return 1;
+        }
+        return sumFibs(num - 2) + sumFibs(num - 1);
+    }
+
+    console.log(sumFibs(5));
+
+
+</script>-->
+
+<!--
+Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
+
+
+<script>
+    let sum=0;
+    for (let i=1;i<=30;i++){
+        sum = sum+i*7;
+    }
+    document.write('Tổng 30 số chia hết cho 7 đầu tiên là: '+sum );
+
+</script>-->
+
+<!--Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. Nhưng nếu số chia hết cho 3 thì in ra "Fizz",
+5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+<script>
+    for (let i=1;i<=100;i++){
+        if ((i % 3 === 0 && i % 5 === 0)) {
+            document.write("Fizz Buzz ");
+        } else if (i%3 ===0){
+            document.write("Fizz ");
+        } else if (i%5===0){
+            document.write("Buzz ");
+        } else{
+            document.write(i+ ' ');
+        }
+
+    }
+
+</script>-->
+
+
+<!--Bài 8: Game đoán số
+
+Nâng cấp game "Hãy thử đoán xem!"
+
+1. Thiết kế giao diện: Giao diện chỉ gồm 1 Button "Chơi": cho phép người dùng bắt đầu  chơi hoặc chơi lại
+
+2. Mô tả ứng dụng: Khi người dùng nhấn vào button “Chơi”:
+
+Ứng dụng hiển thị cửa sổ prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào
+Ứng dụng chọn ra số ngẫu nhiên trong khoảng mà ngườI dùng chọn
+Ứng dụng hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán
+Ứng dụng lấy kết quả và so sánh với giá trị ngẫu nhiên.
+Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi
+Nếu lớn hơn hoặc bé thua thì hiển thị thông báo lớn hơn hay bé thua và cho phép người dùng lựa chọn lại.
+Chú ý: Người dùng chỉ được lựa chọn tối đa ba lần
+<div>
+    <div style=" ">
+        <button onclick="startGame();" type="button">=======Chơi=======</button>
+    </div>
+</div>
+<script>
+    function startGame(){
+        alert('Hãy nhập khoảng số bạn muốn chơi');
+        let min = prompt('Chọn số nhỏ nhất trong khoảng: ');
+        let max = prompt('Chọn số lớn nhất trong khoảng: ');
+        let numBer =   Math.floor(Math.random()*(max - min) + min);
+        for (let i = 1; i <=3 ; i++) {
+            let guestNum = parseInt(prompt('Hãy nhập số bạn dự đoán: '));
+            if (guestNum<numBer){
+                alert('Số bạn nhập bé hơn số tôi chọn');
+            } else if (guestNum>numBer){
+                alert('Số bạn nhập lớn hơn số tôi chọn');
+            } else if (guestNum===numBer){
+                alert('Chúc mừng, bạn đã đoán đúng số');
+                break;
+            }
+            if (i===3&&guestNum!==numBer){
+                alert('Bạn đã thua');
+            }
+            }
+    }
+</script>-->
+
+
+
+</body>
+</html>
+
+
+
+
