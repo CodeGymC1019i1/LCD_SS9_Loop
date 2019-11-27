@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let p = parseFloat(prompt("số tiền ban đầu ( đơn vị triệu đông) "));
+    let num = parseFloat(prompt("Số tháng vay "));
+    let rate = parseFloat(prompt("lãi suất hàng tháng (đơn vị %) "));
+    let inter;
+
+    for (let i = 1 ; i<= num ; i++) {
+        inter = p*rate/100;
+        p += inter;
+        document.write("Tổng tiền tháng thứ " + i + ' là ');
+        document.write( p + ' triệu đồng ');
+        document.write("Tiền lãi là " +inter + 'triệu đồng');
+        document.write('<br/>');
+
+    }
+
+</script>
+</body>
+</html>

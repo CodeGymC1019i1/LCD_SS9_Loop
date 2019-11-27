@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In giai thừa 1 số nguyên dương</title>
+</head>
+<body>
+    <script>
+        let n = prompt("Mời nhập số nguyên dương muốn tính giai thừa ");
+        let N = 1;
+        if ( n < 1)
+            alert("n cần là số nguyên dương, Mời nhập lại ");
+        else {
+            for (let i = 1; i <= n; i++ ) {
+                N *=i  ;
+            }
+            document.write(n+"! = " +N);
+        }
+
+    </script>
+</body>
+</html>

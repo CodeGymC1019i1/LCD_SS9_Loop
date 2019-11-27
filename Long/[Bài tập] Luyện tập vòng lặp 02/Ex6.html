@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <script>
+            let i, j;
+            // Phần trên trái tim
+            for ( j = 10; j >=0; j-=2){
+                for ( i = 1; i <=30-j; i++) {
+                    if (i<=(32-j)/2 - j/2 || i >=  (32-j)/2 + j/2)
+                        document.write("*");
+                    else
+                        document.writeln("&nbsp");
+
+                }
+                document.write("<br>");
+
+            }
+
+
+            // Phần dưới trái tim
+            for (j = 31; j >= 1; j-=2) {
+                for (i = 1; i <=j; i++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        </script>
+
+    </div>
+
+</body>
+</html>
